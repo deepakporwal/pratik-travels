@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pratik Travels Ujjain - Tourist taxi, intracity taxi and AC taxi services. Explore Madhya Pradesh with trusted local guides and comfortable vehicles.">
+    <meta name="theme-color" content="#667eea">
     <title>Pratik Travels Ujjain - Tours & Travels</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/not-available.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h1>🌍 Pratik Travels</h1>
+                    <span class="site-title">🌍 Pratik Travels</span>
                     <p>Ujjain</p>
                 </div>
                 <ul class="nav-menu">
@@ -24,252 +31,164 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Explore the World with Pratik Travels</h2>
-            <p>Discover incredible destinations and create unforgettable memories</p>
-            <button class="btn btn-primary" onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'})">
-                Explore Tours
-            </button>
-        </div>
-    </section>
-
-    <!-- Featured Packages Section -->
-    <section id="packages" class="packages">
-        <div class="container">
-            <h2 class="section-title">Our Featured Tours</h2>
-            <div class="packages-grid">
-                <!-- Package 1 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <h3>🏔️ Mountain Adventure</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Himalayan Trek</h4>
-                        <p>Explore the majestic Himalayan mountains with experienced guides.</p>
-                        <div class="price">₹12,999 per person</div>
-                        <ul class="features">
-                            <li>✓ 5 Days Duration</li>
-                            <li>✓ All Meals Included</li>
-                            <li>✓ Expert Guides</li>
-                            <li>✓ Travel Insurance</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
-                </div>
-
-                <!-- Package 2 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                        <h3>🏖️ Beach Getaway</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Goa Paradise</h4>
-                        <p>Relax and unwind at the beautiful beaches of Goa with water sports.</p>
-                        <div class="price">₹8,999 per person</div>
-                        <ul class="features">
-                            <li>✓ 4 Days Duration</li>
-                            <li>✓ Hotel & Food</li>
-                            <li>✓ Water Sports</li>
-                            <li>✓ Airport Transfer</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
-                </div>
-
-                <!-- Package 3 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                        <h3>🏛️ Cultural Tour</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Rajasthan Heritage</h4>
-                        <p>Immerse yourself in the rich cultural heritage of Rajasthan.</p>
-                        <div class="price">₹10,499 per person</div>
-                        <ul class="features">
-                            <li>✓ 6 Days Duration</li>
-                            <li>✓ Guided Tours</li>
-                            <li>✓ Palace Visits</li>
-                            <li>✓ Local Cuisine</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
-                </div>
-
-                <!-- Package 4 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                        <h3>🌴 Tropical Escape</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Kerala Backwaters</h4>
-                        <p>Experience the serene backwaters and houseboat cruises of Kerala.</p>
-                        <div class="price">₹11,999 per person</div>
-                        <ul class="features">
-                            <li>✓ 5 Days Duration</li>
-                            <li>✓ Houseboat Stay</li>
-                            <li>✓ Spa Services</li>
-                            <li>✓ Meals & Transfers</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
-                </div>
-
-                <!-- Package 5 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                        <h3>⛰️ Adventure Sports</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Adrenaline Rush</h4>
-                        <p>Thrilling adventure activities including rock climbing and paragliding.</p>
-                        <div class="price">₹13,499 per person</div>
-                        <ul class="features">
-                            <li>✓ 4 Days Duration</li>
-                            <li>✓ Equipment Included</li>
-                            <li>✓ Safety Training</li>
-                            <li>✓ Professional Trainers</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
-                </div>
-
-                <!-- Package 6 -->
-                <div class="package-card">
-                    <div class="package-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
-                        <h3>🏺 Temple Tour</h3>
-                    </div>
-                    <div class="package-details">
-                        <h4>Spiritual Journey</h4>
-                        <p>Visit sacred temples and holy sites across India with knowledgeable guides.</p>
-                        <div class="price">₹9,999 per person</div>
-                        <ul class="features">
-                            <li>✓ 7 Days Duration</li>
-                            <li>✓ Temple Visits</li>
-                            <li>✓ Priest Guidance</li>
-                            <li>✓ Vegetarian Food</li>
-                        </ul>
-                        <button class="btn btn-secondary">Book Now</button>
-                    </div>
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>Discover Madhya Pradesh — Explore with Pratik Travels</h1>
+                <p class="lead">Guided cultural tours, tourist taxis, and comfortable AC vehicles across Ujjain and
+                    beyond.</p>
+                <div class="hero-ctas">
+                    <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    <a href="#fleet" class="btn btn-secondary">View Fleet</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <div class="container">
-            <h2 class="section-title">Why Choose Pratik Travels?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">✈️</div>
-                    <h3>Expert Planning</h3>
-                    <p>Our experienced team plans every detail of your journey perfectly.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h3>Affordable Prices</h3>
-                    <p>Best prices guaranteed with flexible payment options available.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Safe & Secure</h3>
-                    <p>Travel insurance and 24/7 support for all our travelers.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👥</div>
-                    <h3>Expert Guides</h3>
-                    <p>Professional guides with deep knowledge of destinations.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌟</div>
-                    <h3>Premium Service</h3>
-                    <p>Comfortable hotels, quality meals, and premium amenities included.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📱</div>
-                    <h3>Easy Booking</h3>
-                    <p>Simple online booking process with instant confirmation.</p>
+        <!-- Vehicle Fleet Section -->
+        <section id="fleet" class="fleet-section">
+            <div class="container">
+                <h2 class="section-title">Our Premium Vehicle Fleet</h2>
+
+                <!-- Elegant Fleet Table -->
+                <div class="fleet-table-wrapper">
+                    <table class="fleet-table" role="table" aria-label="Vehicle fleet">
+                        <thead>
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Type</th>
+                                <th>Per KM</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fleet-row" data-category="sedan">
+                                <td class="vehicle-name">Swift Dzire</td>
+                                <td class="vehicle-type">Comfortable Sedan • AC</td>
+                                <td class="vehicle-price">₹11</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('Swift Dzire')">Book Now</button></td>
+                            </tr>
+                            <tr class="fleet-row" data-category="sedan">
+                                <td class="vehicle-name">Tata Tiago</td>
+                                <td class="vehicle-type">Budget Sedan • AC</td>
+                                <td class="vehicle-price">—</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('Tata Tiago')">Book Now</button></td>
+                            </tr>
+                            <tr class="fleet-row" data-category="suv">
+                                <td class="vehicle-name">Maruti Ertiga</td>
+                                <td class="vehicle-type">Family MPV • AC</td>
+                                <td class="vehicle-price">—</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('Maruti Ertiga')">Book Now</button></td>
+                            </tr>
+                            <tr class="fleet-row" data-category="suv">
+                                <td class="vehicle-name">Toyota Innova</td>
+                                <td class="vehicle-type">Premium SUV • AC</td>
+                                <td class="vehicle-price">—</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('Toyota Innova')">Book Now</button></td>
+                            </tr>
+                            <tr class="fleet-row" data-category="coach">
+                                <td class="vehicle-name">Volkswagen Urbania</td>
+                                <td class="vehicle-type">Luxury Coach • AC</td>
+                                <td class="vehicle-price">—</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('Volkswagen Urbania')">Book Now</button></td>
+                            </tr>
+                            <tr class="fleet-row" data-category="coach">
+                                <td class="vehicle-name">AC Coach Bus</td>
+                                <td class="vehicle-type">Large Group Coach • AC</td>
+                                <td class="vehicle-price">—</td>
+                                <td class="vehicle-action"><button class="btn btn-secondary"
+                                        onclick="goToContact('AC Coach Bus')">Book Now</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Travelers Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Amazing experience! The Himalayan trek was unforgettable. Professional guides and great hospitality."</p>
-                    <h4>Rajesh Kumar</h4>
-                    <span>Mountain Adventure Tour</span>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Best vacation ever! Goa beaches are stunning and the water sports were thrilling. Highly recommended!"</p>
-                    <h4>Priya Singh</h4>
-                    <span>Beach Getaway Package</span>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"The cultural tour of Rajasthan was enlightening. Learned so much about our heritage. Worth every rupee!"</p>
-                    <h4>Amit Patel</h4>
-                    <span>Rajasthan Heritage Tour</span>
+        <!-- Features / Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose Pratik Travels</h2>
+                <div class="features-grid">
+                    <article class="feature-item" aria-labelledby="f1">
+                        <div class="feature-icon" aria-hidden="true">🗺️</div>
+                        <h3 id="f1">Local Expertise</h3>
+                        <p>Experienced local guides and tested routes to make your trip smooth and memorable.</p>
+                    </article>
+                    <article class="feature-item" aria-labelledby="f2">
+                        <div class="feature-icon" aria-hidden="true">🚘</div>
+                        <h3 id="f2">Comfortable Fleet</h3>
+                        <p>Well-maintained AC vehicles for solo travellers, families, and groups.</p>
+                    </article>
+                    <article class="feature-item" aria-labelledby="f3">
+                        <div class="feature-icon" aria-hidden="true">⭐</div>
+                        <h3 id="f3">Trusted Service</h3>
+                        <p>Transparent pricing, safety-first approach, and excellent customer support.</p>
+                    </article>
                 </div>
             </div>
+        </section>
         </div>
-    </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready for Your Next Adventure?</h2>
-            <p>Contact us today to book your dream vacation</p>
-            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-        </div>
-    </section>
+        </section>
+
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Pratik Travels</h3>
-                    <p>Your trusted partner for unforgettable travel experiences across India and beyond.</p>
+                    <h3>🌍 Pratik Travels</h3>
+                    <p>Your trusted partner for unforgettable travel experiences across Madhya Pradesh and beyond. We
+                        specialize in culturally enriching tours, wildlife safaris, and heritage explorations.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>📍 Ujjain, Madhya Pradesh</p>
-                    <p>📞 +91-7314-XXXXX</p>
-                    <p>✉️ info@pratiktravels.com</p>
+                    <h4>Contact Information</h4>
+                    <p><strong>📍 Address:</strong></p>
+                    <p>Ujjain, Madhya Pradesh 456010, India</p>
+                    <p><strong>📞 Phone:</strong><br><a href="tel:+91-9876543210">+91-9876-543-210</a></p>
+                    <p><strong>✉️ Email:</strong><br><a href="mailto:info@pratiktravels.com">info@pratiktravels.com</a>
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
+                    <p>Connect with us on social media for travel inspiration and updates</p>
                     <div class="social-links">
-                        <a href="#" class="social-icon">f</a>
-                        <a href="#" class="social-icon">t</a>
-                        <a href="#" class="social-icon">i</a>
-                        <a href="#" class="social-icon">y</a>
+                        <a href="#" class="social-icon" title="Facebook">f</a>
+                        <a href="#" class="social-icon" title="Twitter">t</a>
+                        <a href="#" class="social-icon" title="Instagram">i</a>
+                        <a href="#" class="social-icon" title="YouTube">y</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Pratik Travels Ujjain. All rights reserved.</p>
+                <p>&copy; 2026 Pratik Travels Ujjain. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Contact Us Button -->
+    <a href="contact.html" class="floating-contact-btn" title="Contact Us">
+        <span class="contact-icon">💬</span>
+        <span class="contact-text">Contact Us</span>
+    </a>
+
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -457,9 +457,31 @@ body {
 
 .about-text p {
     color: var(--text-light);
-    margin-bottom: 15px;
-    line-height: 1.8;
+    margin-bottom: 22px;
+    line-height: 1.9;
     font-size: 16px;
+}
+
+.about-text p:first-of-type {
+    font-size: 17px;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+}
+
+.about-text p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.about-content.single-column {
+    max-width: 900px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.about-content.single-column .about-text {
+    padding: 0;
 }
 
 .image-placeholder {
@@ -471,6 +493,16 @@ body {
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        margin-bottom: 20px;
     }
 }
 
@@ -967,6 +999,95 @@ body {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+
+/* ============================================
+   FLEET TABLE (elegant alternate-row table)
+   ============================================ */
+
+.fleet-table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.fleet-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--bg-white);
+}
+
+.fleet-table thead {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+}
+
+.fleet-table th,
+.fleet-table td {
+    padding: 16px 18px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fleet-table tbody tr {
+    transition: background 0.25s ease, transform 0.12s ease;
+}
+
+.fleet-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.fleet-table tbody tr:nth-child(even) {
+    background: rgba(102, 126, 234, 0.04);
+}
+
+.fleet-table tbody tr:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.fleet-table .vehicle-name {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.fleet-table .vehicle-price {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.fleet-table .vehicle-action {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .fleet-table thead {
+        display: none;
+    }
+
+    .fleet-table tbody tr {
+        display: block;
+        margin-bottom: 12px;
+        background: white !important;
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .fleet-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border-bottom: none;
+    }
+
+    .fleet-table .vehicle-action {
+        margin-left: 12px;
+    }
+}
 
 @media (max-width: 768px) {
     .hero-content h2 {

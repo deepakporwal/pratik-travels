@@ -199,33 +199,52 @@ document.querySelectorAll('.package-card, .feature-item, .testimonial-card, .tea
 // BOOKING BUTTON FUNCTIONALITY
 // ============================================
 
+function goToContact(destination) {
+    // Store destination in sessionStorage
+    sessionStorage.setItem('selectedTour', destination);
+    // Redirect to contact page
+    window.location.href = 'contact.html';
+}
+
+// Check if there's a selected tour and auto-select it on contact page
+window.addEventListener('load', function() {
+    const selectedTour = sessionStorage.getItem('selectedTour');
+    if (selectedTour) {
+        const tourSelect = document.getElementById('tour');
+        if (tourSelect) {
+            // Try to match the tour selection
+            Array.from(tourSelect.options).forEach(option => {
+                if (option.value.toLowerCase().includes(selectedTour.toLowerCase()) ||
+                    selectedTour.toLowerCase().includes(option.value.toLowerCase())) {
+                    option.selected = true;
+                }
+            });
+            sessionStorage.removeItem('selectedTour');
+        }
+    }
+});
+
 const bookButtons = document.querySelectorAll('.btn-secondary');
 bookButtons.forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Get the tour name from the package card
+        // Get the place/destination name from the card
+        const placeCard = this.closest('.place-card');
+        if (placeCard) {
+            const placeName = placeCard.querySelector('h3').textContent;
+            goToContact(placeName.toLowerCase().replace(/\s+/g, '-'));
+        }
+    });
+});
+
+const bookButtonsPackage = document.querySelectorAll('.package-card .btn-secondary');
+bookButtonsPackage.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
         const packageCard = this.closest('.package-card');
         const tourName = packageCard.querySelector('h4').textContent;
-        
-        // Scroll to contact form and set tour field
-        const contactSection = document.querySelector('.contact-section');
-        if (contactSection) {
-            const tourSelect = document.getElementById('tour');
-            
-            // Try to match the tour name to select value
-            Array.from(tourSelect.options).forEach(option => {
-                if (option.textContent.toLowerCase().includes(tourName.toLowerCase()) ||
-                    tourName.toLowerCase().includes(option.textContent.toLowerCase())) {
-                    option.selected = true;
-                }
-            });
-            
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            // If not on contact page, redirect to contact page
-            window.location.href = 'contact.html';
-        }
+        goToContact(tourName.toLowerCase().replace(/\s+/g, '-'));
     });
 });
 
@@ -361,9 +380,98 @@ function shareOnSocialMedia(platform) {
 }
 
 // ============================================
+// PLACES FILTER FUNCTIONALITY
+// ============================================
+
+function filterPlaces(category, clickedBtn) {
+    const cards = document.querySelectorAll('.place-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    // Update active button
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if (clickedBtn) clickedBtn.classList.add('active');
+
+    // Filter cards
+    cards.forEach(card => {
+        card.classList.remove('hidden');
+        
+        if (category !== 'all') {
+            const cardCategory = card.getAttribute('data-category');
+            if (cardCategory !== category) {
+                card.classList.add('hidden');
+            }
+        }
+    });
+}
+
+// ============================================
+// NEWSLETTER SUBSCRIPTION
+// ============================================
+
+function handleNewsletterSubscribe(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const messageDiv = document.getElementById('newsletter-message');
+    
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        messageDiv.textContent = 'Please enter a valid email address.';
+        messageDiv.classList.remove('success');
+        messageDiv.classList.add('error');
+        return;
+    }
+    
+    // Show success message
+    messageDiv.textContent = '✓ Thank you for subscribing! Check your email for special offers.';
+    messageDiv.classList.remove('error');
+    messageDiv.classList.add('success');
+    
+    // Clear form
+    form.reset();
+    
+    // Log to console (in real app, would send to server)
+    console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+    
+    // Clear message after 5 seconds
+    setTimeout(() => {
+        messageDiv.classList.remove('success');
+        messageDiv.textContent = '';
+    }, 5000);
+}
+
+// ============================================
 // CONSOLE WELCOME MESSAGE
 // ============================================
 
 console.log('%cWelcome to Pratik Travels Ujjain!', 'font-size: 20px; color: #667eea; font-weight: bold;');
 console.log('%cBest Tours & Travel Experiences', 'font-size: 14px; color: #764ba2;');
 console.log('Website created with ❤️ for travel enthusiasts');
+
+// ============================================
+// VEHICLE FLEET FILTERING
+// ============================================
+
+function filterFleet(category, clickedBtn) {
+    const cards = document.querySelectorAll('.fleet-card, .fleet-row');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Update active button
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if (clickedBtn) clickedBtn.classList.add('active');
+    
+    // Filter rows/cards
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+            card.classList.remove('hidden');
+            if (card.style) {
+                setTimeout(() => { card.style.opacity = '1'; }, 10);
+            }
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+}
