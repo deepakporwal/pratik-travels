@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pratik Travels Ujjain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>🌍 Pratik Travels</h1>
+                    <p>Ujjain</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Get in touch with our team!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our tour packages? Want to customize an itinerary? Or simply want to say hello? Contact us today!</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Address</h3>
+                            <p>Pratik Travels Headquarters<br>
+                            Ujjain, Madhya Pradesh 456010<br>
+                            India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91-7314-XXXXX<br>
+                            +91-XXXXXXXXXX<br>
+                            Toll Free: 1800-PRATIK-1</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>info@pratiktravels.com<br>
+                            bookings@pratiktravels.com<br>
+                            support@pratiktravels.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 4:00 PM<br>
+                            Sunday: Closed<br>
+                            24/7 Emergency Support Available</p>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3>Follow Us On Social Media</h3>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tour">Interested Tour Package</label>
+                            <select id="tour" name="tour">
+                                <option value="">Select a package</option>
+                                <option value="himalayan-trek">Himalayan Trek</option>
+                                <option value="goa-paradise">Goa Paradise</option>
+                                <option value="rajasthan-heritage">Rajasthan Heritage</option>
+                                <option value="kerala-backwaters">Kerala Backwaters</option>
+                                <option value="adrenaline-rush">Adrenaline Rush</option>
+                                <option value="spiritual-journey">Spiritual Journey</option>
+                                <option value="custom">Custom Tour</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input type="number" id="travelers" name="travelers" min="1" placeholder="How many people?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dates">Preferred Travel Dates</label>
+                            <input type="text" id="dates" name="dates" placeholder="e.g., 15 Feb - 20 Feb 2026">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your travel plans or ask any questions..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for exclusive deals and travel tips</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">How do I book a tour? ▼</h3>
+                    <p class="faq-content">You can browse our tour packages on the homepage, select your preferred tour, and click "Book Now". Fill out the booking form with your details, and our team will contact you to confirm the booking and payment.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">What payment methods do you accept? ▼</h3>
+                    <p class="faq-content">We accept all major credit cards, debit cards, UPI, net banking, and bank transfers. A deposit is required to confirm your booking, and the remaining balance is due 30 days before your travel date.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">Is travel insurance included? ▼</h3>
+                    <p class="faq-content">Yes, basic travel insurance is included in all our packages. This covers medical emergencies, trip cancellations, and lost baggage. You can opt for additional coverage if needed.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">Can I customize my tour package? ▼</h3>
+                    <p class="faq-content">Absolutely! We specialize in customized tours. Contact our team with your preferences, duration, and budget, and we'll create a personalized itinerary just for you.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">What is your cancellation policy? ▼</h3>
+                    <p class="faq-content">Cancellations made 60+ days before travel receive a full refund. 30-59 days: 50% refund. Less than 30 days: No refund. Travel insurance can cover cancellation if applicable.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">Do you provide visa assistance? ▼</h3>
+                    <p class="faq-content">For international tours, we provide guidance and can assist with visa documentation. However, the visa process is handled by government agencies, and processing times vary.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">Are there group discounts available? ▼</h3>
+                    <p class="faq-content">Yes! We offer special discounts for groups of 10 or more travelers. Contact us for a customized group quote at discounted rates.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 onclick="toggleFaq(this)">What should I pack for the tours? ▼</h3>
+                    <p class="faq-content">We provide a detailed packing list for each tour based on the destination and season. Generally, bring comfortable clothes, sturdy shoes, sunscreen, and any personal medications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pratik Travels</h3>
+                    <p>Your trusted partner for unforgettable travel experiences across India and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📍 Ujjain, Madhya Pradesh</p>
+                    <p>📞 +91-7314-XXXXX</p>
+                    <p>✉️ info@pratiktravels.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">i</a>
+                        <a href="#" class="social-icon">y</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pratik Travels Ujjain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
